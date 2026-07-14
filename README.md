@@ -54,24 +54,55 @@ KeePassDX
 
 ## Screenshots
 
-### Scan (Main Screen)
-![Scan NFC](assets/screenshots/scan_nfc.png)
+<table>
+<tr>
+<td>
+<b>Scan (Main Screen)</b><br>
+<a href="assets/screenshots/scan_nfc.png">
+<img src="assets/screenshots/scan_nfc.png" width="300">
+</a>
+</td>
 
-### Import Key
-![Import Key](assets/screenshots/import_key.png)
+<td>
+<b>Import Key</b><br>
+<a href="assets/screenshots/import_key.png">
+<img src="assets/screenshots/import_key.png" width="300">
+</a>
+</td>
+</tr>
 
-### Generate Key
-![Generate Key](assets/screenshots/generate_key.png)
+<tr>
+<td>
+<b>Generate Key</b><br>
+<a href="assets/screenshots/generate_key.png">
+<img src="assets/screenshots/generate_key.png" width="300">
+</a>
+</td>
 
-### Settings
-![Settings](assets/screenshots/settings.png)
+<td>
+<b>Settings</b><br>
+<a href="assets/screenshots/settings.png">
+<img src="assets/screenshots/settings.png" width="300">
+</a>
+</td>
+</tr>
 
-### About
-![About](assets/screenshots/about.png)
+<tr>
+<td>
+<b>About</b><br>
+<a href="assets/screenshots/about.png">
+<img src="assets/screenshots/about.png" width="300">
+</a>
+</td>
 
-### App Icon
-![Icon](assets/screenshots/icon.png)
-
+<td>
+<b>App Icon</b><br>
+<a href="assets/screenshots/icon.png">
+<img src="assets/screenshots/icon.png" width="300">
+</a>
+</td>
+</tr>
+</table>
 
 
 ## License
