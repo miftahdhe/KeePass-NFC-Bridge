@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Mode Colors -->
+    <color name="bg_dark">#F3F4F6</color>
+    <color name="card_dark">#FFFFFF</color>
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#4B5563</color>
+    
+    <color name="accent_green">#059669</color>
+    <color name="accent_green_alpha">#33059669</color>
+    
+    <color name="accent_pink">#DB2777</color>
+    <color name="accent_pink_alpha">#33DB2777</color>
+    
+    <color name="gray">#6B7280</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="danger">#DC2626</color>
+    <color name="ic_app_icon_background">#339843</color>
+</resources>

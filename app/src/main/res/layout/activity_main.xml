@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/bg_dark"
+        android:elevation="4dp">
+        
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_marginEnd="12dp" app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_title"
+                android:textColor="@color/accent_green"
+                android:textSize="12sp"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/workspaces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@id/bottomNavigation">
+
+                <!-- WORKSPACE: SCAN -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/workspace_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="visible">
+
+            <!-- System Monitor Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSystemMonitor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/cardSplit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                android:layout_marginBottom="12dp">
+                
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/scanHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@android:drawable/ic_dialog_info"
+                                app:tint="@color/text_secondary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/system_monitor"
+                                android:textSize="12sp"
+                                android:letterSpacing="0.1"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="8dp" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/txtSessionStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/session_expired_initial"
+                                android:textSize="12sp"
+                                android:textColor="@color/danger"
+                                android:textStyle="bold"
+                                android:layout_marginEnd="8dp"/>
+
+                            <ProgressBar
+                                android:id="@+id/progressMonitor"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:indeterminateTint="@color/accent_green"
+                                style="?android:attr/progressBarStyleSmall" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/divider"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgStatusIcon"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@android:drawable/presence_online"
+                                app:tint="@color/accent_green" />
+
+                            <TextView
+                                android:id="@+id/txtStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/status_nfc_ready"
+                                android:textColor="@color/accent_green"
+                                android:textSize="14sp"
+                                android:layout_marginStart="6dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fillViewport="true"
+                        android:overScrollMode="never"
+                        app:layout_constrainedHeight="true"
+                        app:layout_constraintHeight_max="250dp"
+                        app:layout_constraintTop_toBottomOf="@id/scanHeader"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        
+                        <TextView
+                            android:id="@+id/txtLog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/waiting_for_nfc"
+                            android:textColor="@color/accent_green"
+                            android:textSize="11sp"
+                            android:lineSpacingExtra="2dp"
+                            android:fontFamily="monospace" />
+                    </androidx.core.widget.NestedScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- SHA-256 and Dev Info Split -->
+            <LinearLayout
+                android:id="@+id/cardSplit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cardSystemMonitor"
+                app:layout_constraintBottom_toTopOf="@+id/bottomButtonsLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constrainedHeight="true"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardBackgroundColor="@color/card_dark"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/divider">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/encHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                            
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/ic_secure"
+                                app:tint="@color/accent_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_encryption"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginTop="8dp" />
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:overScrollMode="never"
+                            app:layout_constrainedHeight="true"
+                            app:layout_constraintTop_toBottomOf="@id/encHeader"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                                
+                            <TextView
+                                android:id="@+id/txtKeyFile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/msg_ram_empty"
+                                android:textColor="@color/text_primary"
+                                android:textSize="10sp"
+                                android:fontFamily="monospace" />
+                        </ScrollView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layoutDeveloper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/card_dark"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/divider">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/devHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/ic_menu_manage"
+                                app:tint="@color/gray" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_dev_info"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginTop="8dp" />
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:overScrollMode="never"
+                            app:layout_constrainedHeight="true"
+                            app:layout_constraintTop_toBottomOf="@id/devHeader"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                                
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtUid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_uid"
+                                    android:textColor="@color/gray"
+                                    android:textSize="10sp"
+                                    android:fontFamily="monospace" />
+
+                                <TextView
+                                    android:id="@+id/txtType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_type"
+                                    android:textColor="@color/gray"
+                                    android:textSize="10sp"
+                                    android:fontFamily="monospace"
+                                    android:layout_marginTop="4dp" />
+
+                                <TextView
+                                    android:id="@+id/txtTechnology"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_tech"
+                                    android:textColor="@color/gray"
+                                    android:textSize="10sp"
+                                    android:fontFamily="monospace"
+                                    android:layout_marginTop="4dp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Bottom Action Buttons for Scan -->
+            <LinearLayout
+                android:id="@+id/bottomButtonsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:layout_marginBottom="16dp">
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScan"
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_scan_short"
+                    app:icon="@android:drawable/ic_menu_camera"
+                    app:iconGravity="top"
+                    android:backgroundTint="@color/accent_green"
+                    android:textColor="@color/bg_dark"
+                    app:cornerRadius="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOpenKeePass"
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_open_keepass_short"
+                    app:icon="@android:drawable/ic_menu_view"
+                    app:iconGravity="top"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    app:strokeColor="@color/accent_green"
+                    android:textColor="@color/accent_green"
+                    app:cornerRadius="16dp"
+                    android:layout_marginStart="6dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <!-- WORKSPACE: IMPORT / ERASE -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/workspace_import_erase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardImportMonitor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btnForceOverwrite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintVertical_bias="0.0"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/importHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/header_import"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="12dp" />
+                        
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:overScrollMode="never">
+                        
+                        <TextView
+                            android:id="@+id/txtImportStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/import_erase_ready"
+                            android:textColor="@color/accent_green"
+                            android:textSize="11sp"
+                            android:fontFamily="monospace" />
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnForceOverwrite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/bottomButtonsLayoutImport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/btn_force_overwrite"
+                android:visibility="gone"
+                android:backgroundTint="@color/danger"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/bottomButtonsLayoutImport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:layout_marginBottom="16dp">
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnImportKey"
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_import_short"
+                    app:icon="@android:drawable/ic_menu_save"
+                    app:iconGravity="top"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:backgroundTint="@color/card_dark"
+                    android:textColor="@color/text_primary"
+                    app:cornerRadius="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:textSize="12sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEraseNfc"
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_erase_short"
+                    app:icon="@android:drawable/ic_menu_delete"
+                    app:iconGravity="top"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    app:strokeColor="@color/danger"
+                    android:textColor="@color/danger"
+                    app:cornerRadius="16dp"
+                    android:layout_marginStart="6dp"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- WORKSPACE: GENERATE -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/workspace_generate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardGenerateMonitor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btnGenerate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintVertical_bias="0.0"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/genHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/header_generate"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="12dp" />
+                        
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:overScrollMode="never">
+                        
+                        <TextView
+                            android:id="@+id/txtGenerateStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/generate_ready"
+                            android:textColor="@color/text_primary"
+                            android:textSize="11sp"
+                            android:fontFamily="monospace" />
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGenerate"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/btn_generate_short"
+                app:icon="@android:drawable/ic_menu_add"
+                app:iconGravity="top"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:backgroundTint="@color/card_dark"
+                android:textColor="@color/text_primary"
+                app:cornerRadius="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="12sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- WORKSPACE: SETTINGS -->
+        <ScrollView
+            android:id="@+id/workspace_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_title"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="24dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/card_dark"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/divider"
+                    android:layout_marginBottom="16dp">
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        
+                        <CheckBox
+                            android:id="@+id/chkAutoClear"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_auto_clear_clipboard"
+                            android:textColor="@color/text_primary" />
+                            
+                        <CheckBox
+                            android:id="@+id/chkEnableSound"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_enable_sound"
+                            android:textColor="@color/text_primary" />
+                            
+                        <CheckBox
+                            android:id="@+id/chkRequireUnlock"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_require_unlock"
+                            android:textColor="@color/text_primary" />
+                            
+                        <CheckBox
+                            android:id="@+id/checkDeveloper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_dev_mode"
+                            android:textColor="@color/text_primary" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/divider"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp" />
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_session_timeout"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:layout_marginTop="8dp" />
+                        <Spinner
+                            android:id="@+id/spinnerTimeout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_language"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:layout_marginTop="8dp" />
+                        <Spinner
+                            android:id="@+id/spinnerLanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExport"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="@string/btn_backup_key"
+                    app:icon="@android:drawable/ic_menu_save"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:backgroundTint="@color/card_dark"
+                    android:textColor="@color/text_primary"
+                    app:cornerRadius="16dp"
+                    android:layout_marginBottom="8dp" />
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFormatNfc"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="@string/btn_erase_complete"
+                    app:icon="@android:drawable/ic_menu_delete"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    app:strokeColor="@color/danger"
+                    android:textColor="@color/danger"
+                    app:cornerRadius="16dp" />
+                    
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- WORKSPACE: ABOUT -->
+        <FrameLayout
+            android:id="@+id/workspace_about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <include layout="@layout/activity_about" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Navigation Line to separate workspaces from nav -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottomNavigation"
+        android:background="@color/divider" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/nav_item_color_state"
+        app:itemTextColor="@color/nav_item_color_state"
+        android:background="@color/card_dark"
+        app:labelVisibilityMode="labeled" />
+
+</RelativeLayout>

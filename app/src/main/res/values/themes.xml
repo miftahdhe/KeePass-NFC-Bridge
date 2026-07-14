@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KeePassNFCBridge" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_green</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorSurface">@color/card_dark</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <item name="colorSurfaceVariant">@color/card_dark</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

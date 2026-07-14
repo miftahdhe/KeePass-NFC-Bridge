@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">KeePass NFC Bridge</string>
+    <string name="pref_auto_clear_ram">Auto Clear RAM Session</string>
+    <string name="pref_session_timeout_title">Session Timeout</string>
+    <string name="status_nfc_ready">✅ NFC READY</string>
+    <string name="status_card_detected">CARD DETECTED</string>
+    <string name="system_monitor">SYSTEM MONITOR</string>
+    <string name="waiting_for_nfc">Waiting for NFC Card...</string>
+    <string name="key_file_status">🔐 KEY FILE</string>
+    <string name="not_loaded">Not Loaded</string>
+    <string name="keepass_status">📂 KEEPASS DX</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="developer_info">⚙️ Developer Info</string>
+    <string name="btn_generate">🔐 GENERATE NEW KEY</string>
+    <string name="btn_import">📂 IMPORT KEY (BIN)</string>
+    <string name="btn_scan">📡 SCAN NFC CARD</string>
+    <string name="btn_open_keepass">📂 OPEN KEEPASSDX</string>
+    <string name="btn_settings">⚙️ SETTINGS</string>
+    <string name="btn_about">ℹ️ ABOUT</string>
+    <string name="btn_force_overwrite">⚠️ FORCE OVERWRITE</string>
+    <string name="btn_erase_nfc">🗑 ERASE NFC CARD</string>
+    <string name="msg_erase_prompt">🗑 Tap NFC Card to Erase</string>
+    <string name="msg_erase_wait">Waiting for card to erase...</string>
+    <string name="msg_erase_success">✅ NFC Card Erased</string>
+    <string name="msg_erase_success_log">✔ Card successfully erased</string>
+    <string name="msg_erase_failed">❌ Erase Failed</string>
+    <string name="msg_write_prompt">✍️ Tap NFC Card to Write</string>
+    <string name="msg_write_wait">Waiting for card to write key...</string>
+    <string name="msg_write_success">✅ Key File Written</string>
+    <string name="msg_write_success_log">✔ SHA-256 Match\n✔ Verification successful</string>
+    <string name="msg_write_failed">❌ Write Failed</string>
+    <string name="msg_overwrite_prompt">⚠️ Overwrite Mode Active\nTap NFC Card</string>
+    <string name="msg_overwrite_log">Ready to overwrite data on NFC card.</string>
+    <string name="msg_scan_prompt">📡 Tap NFC Card to Scan</string>
+    <string name="msg_scan_wait">Waiting for card to scan...</string>
+    <string name="msg_key_not_available">Key File not available. Please scan NFC first.</string>
+    <string name="msg_unsupported_card">Unsupported NFC Card</string>
+    <string name="msg_read_error">❌ Read Error</string>
+    <string name="msg_nfc_not_supported">❌ NFC Not Supported</string>
+    <string name="msg_session_expired">Session Expired</string>
+    <string name="msg_session_expired_log">Key not available. Please tap NFC card to reload.</string>
+    <string name="msg_ram_empty">Session Expired / RAM Empty</string>
+    <string name="msg_session_active">Session Active</string>
+    <string name="msg_no_timeout">No Timeout</string>
+    <string name="sub_title">NFC RAM Hardware Vault</string>
+    <string name="session_expired_initial">● Session: Expired</string>
+    <string name="import_erase_ready">Ready for Import or Erase</string>
+    <string name="generate_ready">Generate a new secure 128-byte key.\n\nPlease check your NFC card capacity before generating.\nDifferent NFC cards have different storage sizes.\nNFC capacity must be considered before storing the key file.</string>
+    <string name="header_generate">KEY GENERATION</string>
+    <string name="header_import">FILE OPERATIONS</string>
+    <string name="btn_generate_short">GenerateKey</string>
+    <string name="settings_title">KeePass NFC Bridge Settings</string>
+    <string name="pref_auto_clear_clipboard">Auto Clear Clipboard</string>
+    <string name="pref_enable_sound">Enable Sound Effects</string>
+    <string name="pref_require_unlock">Require App Unlock</string>
+    <string name="pref_dev_mode">Developer Mode</string>
+    <string name="pref_session_timeout">Session Timeout</string>
+    <string name="pref_language">Language</string>
+    <string name="btn_backup_key">Backup Key File</string>
+    <string name="btn_erase_complete">Erase Complete Card</string>
+    <string name="app_version">App Version: 1.0.0-beta</string>
+    <string name="app_license">Licensed under MIT License</string>
+    <string name="app_github">GitHub Repository</string>
+    <string name="about_desc">KeePass NFC Bridge is an open source software for interacting with NFC Hardware vaults.</string>
+    <string name="title_encryption">Encryption</string>
+    <string name="title_dev_info">Developer Info</string>
+    <string name="label_uid">UID: -</string>
+    <string name="label_type">Type: -</string>
+    <string name="label_tech">Tech: -</string>
+    <string name="btn_scan_short">ScanNFC Card</string>
+    <string name="btn_open_keepass_short">OpenKeePassDX</string>
+    <string name="btn_import_short">ImportKey File</string>
+    <string name="btn_erase_short">EraseNFC Card</string>
+
+    <string name="key_imported_msg">Key File Imported\nSize: %1$d Bytes\nSHA-256: %2$s\n\nTap NFC Card to Save.</string>
+    <string name="hold_nfc_format">Hold NFC card to format entirely.</string>
+    <string name="ready_import_erase">Ready for Import or Erase</string>
+    <string name="generate_ready_msg">Generate a new secure 128-byte key.\n\nPlease check your NFC card capacity before generating.\nDifferent NFC cards have different storage sizes.\nNFC capacity must be considered before storing the key file.</string>
+    <string name="key_generated_msg">Key File Generated\nSize: %1$d Bytes\nSHA-256: %2$s\n\nTap NFC Card to Save.</string>
+    <string name="opening_keepassdx">Opening KeePassDX...</string>
+    <string name="keepassdx_not_found">KeePassDX not found. Please install KeePassDX first.</string>
+    <string name="waiting_erase">Waiting for NFC Card...\n\nPlease tap your NFC card now to erase the Key File.</string>
+    <string name="force_overwrite_active">Force Overwrite Mode Active.\n\nTap NFC card now!</string>
+    <string name="session_expired_dot">● Session: Expired</string>
+    <string name="key_loaded_msg">Loaded From NFC / RAM Active\nSize: %1$d Bytes\nSHA-256:\n%2$s</string>
+    <string name="opening_keepassdx_auto">Opening KeePassDX automatically...</string>
+    <string name="empty_card">📭 Empty Card</string>
+    <string name="unsupported_card">⚠️ Unsupported Card</string>
+    <string name="card_detected">CARD DETECTED</string>
+    <string name="uid_format">UID: %s</string>
+    <string name="type_format">Type: %s</string>
+    <string name="writing_key_file">✍️ Writing Key File...</string>
+
+    <string name="msg_export_success">Key backup exported successfully</string>
+    <string name="msg_export_failed">Export failed: %s</string>
+    <string name="msg_export_no_key">Session Expired! No key to export.</string>
+    <string name="msg_ram_no_key">Key File not available in RAM</string>
+    <string name="msg_unlock_required">Device unlock required for NFC</string>
+    <string name="msg_unlock_error">Device unlock error</string>
+    <string name="msg_unlock_first">Please unlock your device first</string>
+
+    <string name="timeout_30s">30 Seconds</string>
+    <string name="timeout_1m">1 Minute</string>
+    <string name="timeout_5m">5 Minutes</string>
+    <string name="timeout_10m">10 Minutes</string>
+    <string name="timeout_30m">30 Minutes</string>
+    <string name="timeout_1h">1 Hour</string>
+    <string name="session_active_with_time">● Session: Active (%1$ds)</string>
+    <string name="session_active_no_timeout">● Session: Active (No Timeout)</string>
+
+    <string name="about_title_1">About KeePass NFC Bridge</string>
+    <string name="about_desc_1">KeePass NFC Bridge is an open-source Android security application created to serve as a bridge between KeePassDX and NFC hardware.\n\nThis application is designed to help users manage their KeePass Key File more securely using NFC technology.\n\nKeePass NFC Bridge is not a replacement password manager.\n\nThis application does not replace KeePassDX.\n\nKeePass NFC Bridge works as a:\nHardware Security Bridge\n\nconnecting:\nKeePassDX\nwith\nNFC Hardware Storage\n\nThe main goal of this application is to provide a safer method of storing and using Key Files without having to permanently store sensitive files in the device\'s internal storage.</string>
+    <string name="about_title_2">Why This App Was Created</string>
+    <string name="about_desc_2">KeePass is a password manager system that uses an encrypted database.\n\nIn KeePass usage, there are usually two security components:\n\n1. KeePass Database\nFormat: .kdbx\nContains: Passwords, Usernames, Account info, User secrets.\n\n2. Key File\nFormat: keyfile.bin\nUsed as an additional factor to unlock the database.\n\nCommon problem:\nThe KeePass Database and Key File are often stored on the same device.\nIf the device is compromised, both security components can be exposed.\n\nKeePass NFC Bridge was created to separate these two components.\n\nConcept:\nDatabase: Still managed by KeePassDX.\nKey File: Stored on an NFC card.\n\nWith this method, the user has an additional hardware-based security layer.</string>
+    <string name="about_title_3">Use Cases</string>
+    <string name="about_desc_3">KeePass NFC Bridge is used for:\n\n✓ Generating KeePass Key Files.\n✓ Importing the user\'s existing Key File.\n✓ Writing a Key File to an NFC card.\n✓ Reading a Key File via NFC.\n✓ Verifying data integrity using SHA-256.\n✓ Providing a temporary Key File for KeePassDX.\n✓ Wiping sensitive data from RAM after the session ends.\n\nThis application is built for users who want to enhance KeePass security with a method that is:\nOffline.\nCloudless.\nHardware-based.\nFully user-controlled.</string>
+    <string name="about_title_4">How It Works</string>
+    <string name="about_desc_4">----------------------------------\nSTAGE 1\nGenerate or Import Key File\n----------------------------------\nUsers can:\n- Create a new Key File.\n- Use an existing Key File.\n\nDuring the process, the application performs:\n- File validation.\n- File size checking.\n- Checksum creation.\n- Data preparation for NFC.\n\n----------------------------------\nSTAGE 2\nWriting Key File to NFC\n----------------------------------\nThe Key File is not written as plain data.\nKeePass NFC Bridge uses a special container:\nKPNFC01 Container\n\nThe container stores:\n- Identifier.\n- Version.\n- Key File size.\n- Metadata.\n- Key File data.\n- Verification info.\n\nBefore writing:\nThe application checks:\n- NFC card type.\n- Card capacity.\n- NFC structure.\n- Data to be written.\n\n----------------------------------\nSTAGE 3\nReading NFC Card\n----------------------------------\nWhen the user taps the NFC card:\nThe application performs:\n- Card type detection.\n- NFC technology reading.\n- Searching for KPNFC01 Container.\n- Reading Key File data.\n- Validation.\n\n----------------------------------\nSTAGE 4\nSecurity Verification\n----------------------------------\nBefore the Key File is used:\nThe application performs:\n- Integrity check.\n- SHA-256 verification.\n- Ensuring data has not changed.\n\nIf valid:\nKey File can be used.\n\nIf invalid:\nData is rejected.\n\n----------------------------------\nSTAGE 5\nTemporary RAM Processing\n----------------------------------\nAfter success:\nThe Key File is loaded temporarily into RAM.\n\nKey File:\nIs not stored permanently.\nIs not backed up automatically.\nIs not sent outside the device.\n\nWhen the session ends:\n- RAM is cleared.\n- Sensitive data is deleted.\n- Session becomes inactive.</string>
+    <string name="about_title_5">Security Concept</string>
+    <string name="about_desc_5">KeePass NFC Bridge uses a hardware-based security concept.\n\nThe main goal of this system is to separate security factors so that access does not rely on just one component.\n\nThe security system consists of two factors:\n\n----------------------------------\n1. Knowledge Factor\n----------------------------------\nKeePass master password.\nThe master password is known only to the user and is used by KeePassDX to open the KeePass database.\nKeePass NFC Bridge does not know the user\'s master password.\n\n----------------------------------\n2. Possession Factor\n----------------------------------\nThe NFC card storing the Key File.\nThe NFC card becomes the physical medium the user must possess to provide the Key File.\n\nWithout the NFC card:\nThe user does not have the Key File.\n\nWithout the master password:\nThe user cannot open the KeePass database.\n\nWith the combination of these two factors, the user gains an additional hardware-based security layer.
+
+----------------------------------
+NFC Security Differences
+----------------------------------
+Standard NFC tags can be used for basic key file storage.
+
+Secure NFC products provide additional hardware-based security features depending on the card capability.
+
+For password manager security usage, NTAG424 DNA or higher security NFC hardware is recommended.</string>
+    <string name="about_title_6">Data Privacy and Security</string>
+    <string name="about_desc_6">KeePass NFC Bridge is built on the principle:\nUsers have full control over their data.\n\nThis application does not send user data to servers or third parties.\nAll processes are performed locally on the user\'s device.\n\nKeePass NFC Bridge does not know:\n- The user\'s KeePass master password.\n- The contents of the KeePass database (.kdbx).\n- User account data.\n- The user\'s Key File after the session ends.\n\nThe application developer has no access to the user\'s personal data.\n\nThe application does not collect:\n- Passwords.\n- Key Files.\n- KeePass Databases.\n- Personal information.\n- Data from the user\'s NFC card.\n\nThe application\'s only functions are:\n- Reading NFC cards.\n- Validating data.\n- Processing the Key File temporarily.\n- Providing the Key File for KeePassDX.\n- Managing the RAM session.\n\nThere is no:\n- Cloud synchronization.\n- Automatic data transmission.\n- User data collection.\n- User activity tracking.\n\nAll sensitive data remains on the user\'s device.\n\nKeePass NFC Bridge is designed to work offline.\nThe application does not require an internet connection to perform its main functions.\n\nAll main processes are performed locally on the user\'s device, including:\n- Generate Key File.\n- Import Key File.\n- Reading NFC cards.\n- Writing data to NFC cards.\n- Data integrity verification.\n- Temporary Key File processing in RAM.\n- Shared usage with KeePassDX.\n\nKeePass NFC Bridge does not use external servers and does not send the user\'s sensitive data to the internet.\n\nThe internet is not needed for daily use.\n\nThe user retains full control over:\n- Key Files.\n- NFC Cards.\n- KeePass Databases.\n- Personal security data.</string>
+    <string name="about_title_7">NFC Support</string>
+    <string name="about_desc_7">KeePass NFC Bridge is designed to work with various NFC technologies.\nThe application will check the card capabilities before performing read or write operations.\n\nSupported NFC types:\n\n--------------------------------\nNTAG Series\n--------------------------------\n✓ NTAG213\n✓ NTAG215\n✓ NTAG216\n\nUsed for:\n- NFC data storage.\n- KPNFC01 container.\n- Key File storage.\n\n--------------------------------\nNTAG DNA Series\n--------------------------------\n✓ NTAG413 DNA\n✓ NTAG424 DNA\n✓ NTAG424 DNA TagTamper\n\nSupports additional security features:\n- AES-128 cryptography.\n- Secure Unique NFC Message (SUN).\n- Protection against cloning.\n- Hardware chip-based authentication.\n- Security features depend on chip capabilities.\n\n--------------------------------\nNTAG 22x DNA Series\n--------------------------------\n✓ NTAG223 DNA\n✓ NTAG224 DNA\n\nUsed for authentication needs and NFC applications with additional security.\n\n--------------------------------\nMIFARE Family\n--------------------------------\n✓ MIFARE Ultralight\n✓ MIFARE Classic\n✓ MIFARE DESFire\n\nSupport depends on hardware capabilities and card implementation.\n\n--------------------------------\nNFC Standards\n--------------------------------\n✓ ISO/IEC 14443 Type A\n✓ ISO/IEC 14443 Type B\n✓ ISO/IEC 15693\n\nNote:\nNot all NFC cards have the same capabilities.\nStorage capacity, security level, protocol, and hardware features depend on the type of card used.\nThe application will check the card capabilities before performing NFC operations.</string>
+    <string name="about_title_8">License</string>
+    <string name="about_desc_8">KeePass NFC Bridge is open-source software.\n\nLicense:\nGNU General Public License v3.0\n(GPL-3.0)\n\nThis project was created openly with the goals of:\n- Providing code transparency.\n- Allowing security to be audited.\n- Supporting community contributions.\n\nUsers can study, use, and contribute to the project in accordance with the license rules.</string>
+    <string name="about_title_9">Developer &amp; Support</string>
+    <string name="about_desc_9">Developer:\nMiftahdhe\n\nGitHub:\nhttps://github.com/miftahdhe\n\n----------------------------------\nOpen Source Support\n----------------------------------\nIf KeePass NFC Bridge is useful to you, you can support the project\'s development through cryptocurrency donations.\n\nDonations help with:\n- Development of new features.\n- Application testing.\n- Project maintenance.\n- Application security development.</string>
+
+    <!-- Hardcoded About Text -->
+    <string name="about_btc_header">----------------------------------\nBitcoin (BTC)\n----------------------------------</string>
+    <string name="about_copy_btc">Copy BTC Address</string>
+    <string name="about_xmr_header">----------------------------------\nMonero (XMR)\n----------------------------------</string>
+    <string name="about_copy_xmr">Copy XMR Address</string>
+
+</resources>
