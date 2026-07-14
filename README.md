@@ -52,6 +52,28 @@ KeePassDX
 🔒 Secure card authentication  
 🔒 Protection against raw card reading  
 
+## Screenshots
+
+### Scan (Main Screen)
+![Scan NFC](assets/screenshots/scan_nfc.png)
+
+### Import Key
+![Import Key](assets/screenshots/import_key.png)
+
+### Generate Key
+![Generate Key](assets/screenshots/generate_key.png)
+
+### Settings
+![Settings](assets/screenshots/settings.png)
+
+### About
+![About](assets/screenshots/about.png)
+
+### App Icon
+![Icon](assets/screenshots/icon.png)
+
+
+
 ## License
 
 GPL-3.0 License
