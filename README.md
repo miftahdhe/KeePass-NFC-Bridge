@@ -39,7 +39,7 @@ KeePassDX
 ### v1.0 - Core Bridge
 ✅ NFC read/write support  
 ✅ Key file management  
-✅ KeePassDX workflow foundation 
+✅ KeePassDX workflow foundation  
 ✅ Temporary RAM session system  
 
 ### v1.5 - Improvements (Planned)
