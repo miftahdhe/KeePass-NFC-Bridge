@@ -56,54 +56,39 @@ KeePassDX
 
 <table>
 <tr>
-<td>
-<b>Scan (Main Screen)</b><br>
-<a href="assets/screenshots/scan_nfc.png">
-<img src="assets/screenshots/scan_nfc.png" width="300">
-</a>
+<td align="center">
+<img src="assets/screenshots/scan_nfc.png" width="140"><br>
+Scan NFC
 </td>
 
-<td>
-<b>Import Key</b><br>
-<a href="assets/screenshots/import_key.png">
-<img src="assets/screenshots/import_key.png" width="300">
-</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<b>Generate Key</b><br>
-<a href="assets/screenshots/generate_key.png">
-<img src="assets/screenshots/generate_key.png" width="300">
-</a>
+<td align="center">
+<img src="assets/screenshots/import_key.png" width="140"><br>
+Import Key
 </td>
 
-<td>
-<b>Settings</b><br>
-<a href="assets/screenshots/settings.png">
-<img src="assets/screenshots/settings.png" width="300">
-</a>
+<td align="center">
+<img src="assets/screenshots/generate_key.png" width="140"><br>
+Generate Key
 </td>
 </tr>
 
 <tr>
-<td>
-<b>About</b><br>
-<a href="assets/screenshots/about.png">
-<img src="assets/screenshots/about.png" width="300">
-</a>
+<td align="center">
+<img src="assets/screenshots/settings.png" width="140"><br>
+Settings
 </td>
 
-<td>
-<b>App Icon</b><br>
-<a href="assets/screenshots/icon.png">
-<img src="assets/screenshots/icon.png" width="300">
-</a>
+<td align="center">
+<img src="assets/screenshots/about.png" width="140"><br>
+About
+</td>
+
+<td align="center">
+<img src="assets/screenshots/icon.png" width="140"><br>
+App Icon
 </td>
 </tr>
 </table>
-
 
 ## License
 
