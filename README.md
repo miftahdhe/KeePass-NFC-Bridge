@@ -37,8 +37,11 @@ KeePassDX
 
 Watch the KeePass NFC Bridge v1.0 demonstration:
 
-[![KeePass NFC Bridge Demo](https://img.youtube.com/vi/UqhBvUGHCqE/maxresdefault.jpg)](https://youtu.be/UqhBvUGHCqE)
-
+<p align="center">
+<a href="https://youtu.be/UqhBvUGHCqE">
+<img src="https://img.youtube.com/vi/UqhBvUGHCqE/maxresdefault.jpg" width="350">
+</a>
+</p>
 
 ## Roadmap
 
