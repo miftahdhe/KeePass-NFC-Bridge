@@ -33,6 +33,12 @@ Temporary RAM Session
    
 KeePassDX 
 
+## Demo Video
+
+Watch the KeePass NFC Bridge v1.0 demonstration:
+
+[![KeePass NFC Bridge Demo](https://img.youtube.com/vi/UqhBvUGHCqE/maxresdefault.jpg)](https://youtu.be/UqhBvUGHCqE)
+
 
 ## Roadmap
 
@@ -89,6 +95,14 @@ App Icon
 </td>
 </tr>
 </table>
+
+## Download
+
+Latest APK:
+- GitHub Releases: https://github.com/miftahdhe/KeePass-NFC-Bridge/releases
+
+Source Code:
+- Available in this repository
 
 ## License
 
